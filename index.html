@@ -16,6 +16,19 @@
     #main {margin-left: 120px}
     /* Remove margins from "page content" on small screens */
     @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+      .circle-container {
+            width: 150px; /* Set the width and height of the circular container */
+            height: 150px;
+            overflow: hidden; /* Hide any content that goes beyond the container */
+            border-radius: 50%; /* Create a circular border */
+        }
+
+        .circle-image {
+            width: 100%; /* Make the image fill the circular container */
+            height: 100%;
+            object-fit: cover; /* Maintain the aspect ratio and cover the container */
+            border-radius: 50%; /* Ensure the image itself is also clipped in a circle */
+        }
     </style>
   </head>
 <body class="w3-black">
@@ -23,7 +36,9 @@
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
-  <img src="Siva-min.jpg" width="120" height="115">
+  <div class="circle-container">
+  <img src="Siva-min.jpg" width="120" height="115" alt="Circular Image" class="circle-image">
+  </div>
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
